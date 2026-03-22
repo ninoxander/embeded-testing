@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: #050c18;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .jumbotron {
+    width: 96%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #050c18;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px;
+    border: 2px solid rgba(0, 174, 239, 0.4);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+  }
+
+  .jumbotron::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: repeating-linear-gradient(transparent, transparent 2px, rgba(0, 113, 197, 0.03) 3px);
+    pointer-events: none;
+  }
+
+  .innova-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 7vw, 4em);
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: clamp(3px, 1.5vw, 10px);
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #00aeef;
+    z-index: 2;
+    word-break: break-word;
+  }
+
+  .zapopan-tag {
+    font-family: 'Montserrat', sans-serif;
+    color: #1fc77a;
+    font-size: clamp(0.65rem, 2vw, 1.1em);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 1vw, 5px);
+    margin-top: 10px;
+    z-index: 2;
+  }
+
+  .cta-group {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .cta-btn {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(11px, 1.5vw, 13px);
+    letter-spacing: 2px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: #1fc77a;
+    color: #050c18;
+    border: 1px solid #1fc77a;
+    box-shadow: 0 0 15px rgba(31, 199, 122, 0.5);
+  }
+  .btn-primary:hover { background: transparent; color: #1fc77a; }
+
+  .btn-secondary {
+    background: transparent;
+    color: #00aeef;
+    border: 1px solid #00aeef;
+  }
+  .btn-secondary:hover { background: rgba(0, 174, 239, 0.1); }
+
+  .hud-elements {
+    position: absolute;
+    font-family: monospace;
+    font-size: 11px;
+    color: #0071c5;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hud-top-left  { top: 30px; left: 35px; text-align: left; }
+  .hud-bottom-right { bottom: 30px; right: 35px; text-align: right; }
+
+  @media (max-width: 600px) {
+    .jumbotron {
+      width: 100%;
+      border-radius: 0;
+      padding: 32px 20px;
+    }
+    .cta-group {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    .cta-btn {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      padding: 15px;
+    }
+    .hud-elements { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="hud-elements hud-top-left">INNOVAIA_SYSTEM_INIT v2.6<br>STATUS: ACTIVE</div>
+  <div class="hud-elements hud-bottom-right">20.72° N / 103.39° W<br>ZAPOPAN_HQ</div>
+
+  <h1 class="innova-title">INNOVA<span style="color:#00aeef;">IA</span></h1>
+  <div class="zapopan-tag">ZAPOPAN_MEXICO / 2026</div>
+
+  <div class="cta-group">
+    <a href="#" onclick="window.top.location.href='https://sites.google.com/zapopan.tecmm.edu.mx/evento/registro'; return false;"
+       class="cta-btn btn-primary">Regístrate Ahora</a>
+    <a href="#" onclick="window.top.location.href='https://sites.google.com/zapopan.tecmm.edu.mx/evento/agenda'; return false;"
+       class="cta-btn btn-secondary">Ver Agenda</a>
+  </div>
+</div>
+
+</body>
+</html>
