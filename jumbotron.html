@@ -134,6 +134,12 @@
     .hud-elements { display: none; }
   }
 </style>
+<script>
+  document.querySelector('.jumbotron').style.height = window.innerHeight + 'px';
+    window.addEventListener('resize', () => {
+    document.querySelector('.jumbotron').style.height = window.innerHeight + 'px';
+  });
+</script>
 </head>
 <body>
 
