@@ -119,6 +119,7 @@
       width: 100%;
       border-radius: 0;
       padding: 60px 30px;
+      aspect-ratio: 4/3; /* taller on mobile */
     }
     .cta-group {
       flex-direction: column;
@@ -134,12 +135,6 @@
     .hud-elements { display: none; }
   }
 </style>
-<script>
-  document.querySelector('.jumbotron').style.height = window.innerHeight + 'px';
-    window.addEventListener('resize', () => {
-    document.querySelector('.jumbotron').style.height = window.innerHeight + 'px';
-  });
-</script>
 </head>
 <body>
 
